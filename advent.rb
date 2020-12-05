@@ -7,13 +7,11 @@ pp(begin
       if chr == "F"
         final_row = br = (fr + br) / 2
       elsif chr == "B"
-        fr = (fr + br) / 2
-        final_row = fr + 1
+        final_row = (fr = (fr + br) / 2) + 1
       elsif chr == "L"
         r = (l + r) / 2
       else
-        final_column = l = (l + r) / 2
-        final_column = l + 1
+        final_column = (l = (l + r) / 2) + 1
       end
     end
 
