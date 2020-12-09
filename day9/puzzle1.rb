@@ -8,7 +8,7 @@ pp(begin
 
   mismatch = -1
   data[25..-1].each do |n|
-    sums = h.values.flatten.uniq
+    sums = h.values.flatten
 
     mismatch = n
     break if !sums.include?(n)
