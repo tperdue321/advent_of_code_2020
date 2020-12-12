@@ -1,6 +1,5 @@
-data = IO.read("input.txt").split("\n").map(&:chomp).map(&:to_i).sort
-data.unshift(0)
-paths = Array.new(0)
+data = [0] + IO.read("input.txt").split("\n").map(&:chomp).map(&:to_i).sort
+paths = []
 data.each_with_index do |n,i|
   variations = 1
   j = 2
@@ -9,7 +8,6 @@ data.each_with_index do |n,i|
     j += 1
   end
   last = i-variations
-  p last
   if last > -1
     paths <<  paths[last..(i-1)].reduce(:+)
   else
